@@ -1,0 +1,29 @@
+.side_nav {
+  width: 16rem;
+  position: fixed;
+}
+
+.nav_list {
+  padding: 1rem;
+}
+
+.nav_list > li:hover {
+  background-color: var(--list-hover);
+}
+
+.list_item {
+  font-weight: 500;
+}
+
+.social_icons {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.side_nav_icon {
+  padding: 0.2rem;
+}
+
+.side_nav_icon:hover {
+  color: var(--primary-color);
+}

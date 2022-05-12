@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--bg-color);
+}
+
+.logo img {
+  width: 200px;
+}
+
+.search {
+  margin-right: 1rem;
+  background-color: var(--grey-color);
+  padding: 0.7rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.search input {
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  min-width: 300px;
+}
+
+.icon {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.user {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+}

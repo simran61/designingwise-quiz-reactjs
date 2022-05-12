@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: rgb(43, 110, 219);
+  --primary-light: rgb(143, 175, 226);
+  --dark-grey: rgb(85, 85, 85);
+  --grey-color: rgb(219, 219, 219);
+  --light-grey: rgb(241, 239, 239);
+  --bg-color: aliceblue;
+  --secondary-color: #9c5dbb;
+  --text-color: rgb(41, 40, 40);
+  --score1-card: rgb(14, 158, 14);
+  --score2-card: #0e6783;
+  --score3-card: #c0490a;
+  --danger-color: rgb(252, 61, 61);
+  --success-color: rgb(98, 195, 98);
+  --dark-blue-hover: rgb(21, 55, 109);
+  --default-grey: grey;
+  --list-hover: rgba(180, 204, 243, 0.548);
+  --white-color: white;
+  --shadow-color: #888888;
+  --options-hover: rgb(180, 204, 243);
+  --dull-black: rgb(46, 46, 46);
+  --low-opacity-primary: rgba(180, 204, 243, 0.548);
+}
+
+/* Custom Scrollbar starts */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--default-grey);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-blue-hover);
+}
+/* Custom scrollbar ends */
+
+.grey_text {
+  color: var(--default-grey);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.show_flex {
+  display: flex;
+}
+
+.add-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  margin-top: 4.788rem;
+}
+
+.side_nav {
+  width: 16rem;
+  position: fixed;
+}
+
+.main_content {
+  background-color: var(--grey-color);
+  margin-left: 16rem;
+  padding: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+ul > li {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0.7rem 2rem 0.5rem 1rem;
+  width: fit-content;
+  border-radius: 0.5rem;
+}
+
+.mr_sm {
+  margin-right: 0.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+.active {
+  background-color: var(--list-hover);
+}
+
+li {
+  list-style: none;
+}
+
+.categories {
+  margin: 1rem 0 0 0;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.btn_primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn_primary:hover {
+  background-color: var(--primary-light);
+  color: var(--white-color);
+}
+
+.gap_sm {
+  row-gap: 1rem;
+}
+
+.categories_heading {
+  margin-top: 2.5rem;
+}
+
+.card_container {
+  background-color: var(--bg-color);
+  margin: 1rem 0;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.padding_md {
+  padding: 1rem 2rem 0 2rem;
+}
+
+.popular_content {
+  flex-basis: 55%;
+}
+
+.popular_content > p {
+  margin-top: 0.3rem;
+  color: var(--dark-grey);
+}
+
+.flex_wrapper {
+  display: flex;
+  margin: 1rem 0;
+}
