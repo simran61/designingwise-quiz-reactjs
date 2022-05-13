@@ -1,0 +1,30 @@
+.general_info {
+  flex-basis: 40%;
+}
+
+.gradient {
+  height: 17rem;
+  background-color: #ccbfda;
+  background-image: linear-gradient(
+    315deg,
+    #ccbfda 0%,
+    #c3e4e4 39%,
+    #ffffff 95%
+  );
+  position: relative;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  padding: 0.9rem;
+}
+
+.gradient > p {
+  margin: 1rem 0;
+  color: var(--dark-grey);
+}
+
+.side_icon {
+  height: 8.75rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1.5rem;
+}

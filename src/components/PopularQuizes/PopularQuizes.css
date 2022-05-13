@@ -1,0 +1,15 @@
+.popular_card {
+  align-items: center;
+  min-width: 29rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.popular_icon {
+  height: 4.375rem;
+}
+
+.padding_categories {
+  padding: 3rem 1rem 0 1rem;
+}
