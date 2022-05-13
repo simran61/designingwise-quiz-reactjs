@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./SingleQuestion.css";
+import "./SingleAnswer.css";
 import time from "../../assests/time.png";
 import score from "../../assests/score.png";
+import { Link } from "react-router-dom";
 
-const SingleQuestion = () => {
+const SingleAnswer = () => {
   return (
     <>
       <div className="ques_option_container">
@@ -15,7 +15,7 @@ const SingleQuestion = () => {
           </div>
           <div className="show_flex align_center">
             <img src={score} alt="score" className="present_score_img mr_sm" />
-            <p className="size_md">0 points</p>
+            <p className="size_md">-10 points</p>
           </div>
         </div>
 
@@ -28,7 +28,7 @@ const SingleQuestion = () => {
         </div>
 
         <div className="quiz_options">
-          <div className="option">
+          <div className="option hoverNone">
             <input
               type="radio"
               id="margotDisney"
@@ -38,7 +38,7 @@ const SingleQuestion = () => {
             <label for="margotDisney">Margot Disney</label>
           </div>
 
-          <div className="option">
+          <div className="option right hoverRight">
             <input
               type="radio"
               id="waltDisney"
@@ -48,7 +48,7 @@ const SingleQuestion = () => {
             <label for="waltDisney">Walt Disney</label>
           </div>
 
-          <div className="option">
+          <div className="option wrong hoverWrong">
             <input
               type="radio"
               id="royDisney"
@@ -58,7 +58,7 @@ const SingleQuestion = () => {
             <label for="royDisney">Roy Disney</label>
           </div>
 
-          <div className="option">
+          <div className="option hoverNone">
             <input
               type="radio"
               id="maddoxDisney"
@@ -75,7 +75,7 @@ const SingleQuestion = () => {
               <i className="fa-solid fa-arrow-left-long"></i> Previous
             </button>
           </Link>
-          <Link to={"/singleanswer"}>
+          <Link to={"/results"}>
             <button className="btn btn_primary">
               Next <i className="fa-solid fa-arrow-right-long"></i>
             </button>
@@ -86,4 +86,4 @@ const SingleQuestion = () => {
   );
 };
 
-export default SingleQuestion;
+export default SingleAnswer;

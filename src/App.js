@@ -7,6 +7,7 @@ import SideNavBar from "./components/SideNavBar/SideNavBar";
 import Home from "./Pages/Home/Home";
 import Rules from "./Pages/Rules/Rules";
 import SingleQuestion from "./Pages/SingleQuestion/SingleQuestion";
+import SingleAnswer from "./Pages/SingleAnswer/SingleAnswer";
 import Results from "./Pages/Results/Results";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import LogIn from "./Pages/Auth/LogIn";
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/rules" element={<Rules />} />
             <Route path="/singlequestion" element={<SingleQuestion />} />
+            <Route path="/singleanswer" element={<SingleAnswer />} />
             <Route path="/results" element={<Results />} />
             <Route path="/profilepage" element={<ProfilePage />} />
             <Route path="/login" element={<LogIn />} />
