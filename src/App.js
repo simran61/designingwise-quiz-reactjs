@@ -35,18 +35,6 @@ const App = () => {
           </Routes>
         </div>
       </section>
-
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/rules" element={<Rules />} />
-        <Route path="/singlequestion" element={<SingleQuestion />} />
-        <Route path="/results" element={<Results />} />
-        <Route path="/profilepage" element={<ProfilePage />} />
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/logout" element={<LogOut />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/leaderboard" element={<LeaderBoard />} />
-      </Routes> */}
     </div>
   );
 };
