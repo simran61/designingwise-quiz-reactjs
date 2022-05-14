@@ -1,0 +1,52 @@
+.profile_page_img {
+  border-radius: 1rem;
+  width: 10.625rem;
+  height: 10.625rem;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.progress_text {
+  margin-bottom: 0.4rem;
+  text-align: right;
+}
+
+.progress {
+  background-color: var(--grey-color);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.progress_done {
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+.status_div {
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.status_info_icon_card {
+  margin-top: 0.5rem;
+}
+
+.icon_div {
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  margin-right: 0.7rem;
+  border: 1px solid var(----grey-color);
+  box-shadow: 3px 3px 5px var(--shadow-color);
+}
+
+.profile_score_icon_user {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}

@@ -1,0 +1,50 @@
+.leaderboard {
+  flex-basis: 50%;
+}
+
+.leaderboard_heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.see_more {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.lboard_main_img {
+  height: 12.5rem;
+}
+
+.lb_stats {
+  display: flex;
+}
+
+.person_img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.person {
+  margin: 0 0.7rem;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.rank {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.play {
+  color: var(--dark-grey);
+  font-size: 0.8rem;
+}

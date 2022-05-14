@@ -1,13 +1,13 @@
 import React from "react";
-import LeaderBoard from "../../Pages/LeaderBoard/LeaderBoard";
 import ExploreMore from "../ExploreMore/ExploreMore";
+import TopScorers from "../TopScorers/TopScorers";
 import "./BottomContainer.css";
 
 const BottomContainer = () => {
   return (
     <>
       <div className="two_container">
-        <LeaderBoard />
+        <TopScorers />
         <ExploreMore />
       </div>
     </>
