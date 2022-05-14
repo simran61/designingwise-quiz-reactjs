@@ -1,60 +1,97 @@
 import React from "react";
 import "./LeaderBoard.css";
-import quiz_main from "../../assests/quiz_main.png";
 import profile from "../../assests/profile.jpeg";
 import profile2 from "../../assests/profile2.jpg";
 import profile3 from "../../assests/profile3.jpg";
-import profile4 from "../../assests/profile4.jpg";
+import trophy from "../../assests/trophy1.png";
+import LowRank from "../../components/LowRank/LowRank";
 
 const LeaderBoard = () => {
   return (
     <>
-      <div class="categories leaderboard">
-        <div class="card_container padding_md">
-          <div class="leaderboard_heading">
-            <div class="popular_content">
-              <h3>DesignerWise Masterpieces</h3>
-              <p>Play more and more quizes to build your rank</p>
+      <h2>DesignerWise Masterpieces</h2>
+      <div className="leaderBoard_container">
+        <div className="toppers">
+          <div className="rank_card rank1 show_center">
+            <img src={trophy} alt="" className="topper_icon" />
+            <img src={profile} alt="" className="rank_profile_img" />
+            <h2>Simran Gangwani</h2>
+            <p className="sm_text">Designer & developer</p>
+            <button className="btn btn_rank">128 Answer</button>
+            <div className="show_status show_flex">
+              <div className="status_info show_flex score_first">
+                <i className="profile_score_icon fa-solid fa-wand-magic-sparkles"></i>
+                <h3>62</h3>
+              </div>
+
+              <div className="status_info show_flex score_first">
+                <i className="profile_score_icon fa-regular fa-star-half-stroke"></i>
+                <h3>47</h3>
+              </div>
+
+              <div className="status_info show_flex score_first">
+                <i className="profile_score_icon fa-solid fa-check"></i>
+                <h3>128</h3>
+              </div>
             </div>
-            <a href="./leaderBoard/leaderBoard.html" class="see_more">
-              See All
-            </a>
           </div>
-          <div class="flex_wrapper">
-            <div class="lb_img">
-              <img src={quiz_main} alt="" class="lboard_main_img" />
+
+          <div className="rank_card rank2 show_center">
+            <img src={trophy} alt="" className="topper_icon" />
+            <img src={profile2} alt="" className="rank_profile_img" />
+            <h2>Arnav Paul</h2>
+            <p className="sm_text">Designer & developer</p>
+            <button className="btn btn_rank">121 Answer</button>
+            <div className="show_status show_flex">
+              <div className="status_info show_flex score_second">
+                <i className="profile_score_icon fa-solid fa-wand-magic-sparkles"></i>
+                <h3>59</h3>
+              </div>
+
+              <div className="status_info show_flex score_second">
+                <i className="profile_score_icon fa-regular fa-star-half-stroke"></i>
+                <h3>45</h3>
+              </div>
+
+              <div className="status_info show_flex score_second">
+                <i className="profile_score_icon fa-solid fa-check"></i>
+                <h3>121</h3>
+              </div>
             </div>
-            <div class="lb_stats">
-              <div class="person">
-                <img src={profile} alt="" class="person_img" />
-                <p class="name">simran65</p>
-                <p class="rank">#16</p>
-                <p class="play">played 78 quizes</p>
+          </div>
+
+          <div className="rank_card rank3 show_center">
+            <img src={trophy} alt="" className="topper_icon" />
+            <img src={profile3} alt="" className="rank_profile_img" />
+            <h2>Yashi Brewer</h2>
+            <p className="sm_text">Designer & developer</p>
+            <button className="btn btn_rank">108 Answer</button>
+            <div className="show_status show_flex">
+              <div className="status_info show_flex score_third">
+                <i className="profile_score_icon fa-solid fa-wand-magic-sparkles"></i>
+                <h3>52</h3>
               </div>
 
-              <div class="person">
-                <img src={profile2} alt="" class="person_img" />
-                <p class="name">einstein78</p>
-                <p class="rank">#28</p>
-                <p class="play">played 64 quizes</p>
+              <div className="status_info show_flex score_third">
+                <i className="profile_score_icon fa-regular fa-star-half-stroke"></i>
+                <h3>39</h3>
               </div>
 
-              <div class="person">
-                <img src={profile3} alt="" class="person_img" />
-                <p class="name">yashi12</p>
-                <p class="rank">#48</p>
-                <p class="play">played 57 quizes</p>
-              </div>
-
-              <div class="person">
-                <img src={profile4} alt="" class="person_img" />
-                <p class="name">sam.126</p>
-                <p class="rank">#56</p>
-                <p class="play">played 53 quizes</p>
+              <div className="status_info show_flex score_third">
+                <i className="profile_score_icon fa-solid fa-check"></i>
+                <h3>108</h3>
               </div>
             </div>
           </div>
         </div>
+
+        <LowRank />
+        <LowRank />
+        <LowRank />
+        <LowRank />
+        <LowRank />
+        <LowRank />
+        <LowRank />
       </div>
     </>
   );

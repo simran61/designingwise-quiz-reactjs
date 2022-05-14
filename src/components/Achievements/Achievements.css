@@ -1,0 +1,75 @@
+.progress {
+  background-color: var(--grey-color);
+  border-radius: 1rem;
+  position: relative;
+  height: 0.7rem;
+  width: 37.5rem;
+}
+
+.progress_done {
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+.progress_2,
+.progress_3 {
+  height: 0.5rem;
+  width: 6.25rem;
+}
+
+.align_center {
+  align-items: center;
+}
+
+.profile_container_half {
+  flex-basis: 50%;
+}
+
+.profile_page_card_heading {
+  display: inline;
+}
+
+.achivement_txt_badge {
+  background-color: var(--grey-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 100%;
+  margin-left: 0.2rem;
+}
+
+.achievement_content {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-around;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.medals {
+  text-align: center;
+}
+
+.medal_img {
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.medal_img:hover {
+  box-shadow: 4px 4px 12px var(--shadow-color);
+  transition: 0.3s;
+}
+
+.achievement_card_footer {
+  border-top: 1px solid var(--grey-color);
+  padding-top: 0.7rem;
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+  cursor: pointer;
+}
