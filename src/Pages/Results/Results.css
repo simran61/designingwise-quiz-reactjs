@@ -1,0 +1,41 @@
+.main_content {
+  height: auto;
+}
+
+.ques_option_container {
+  margin-bottom: 2rem;
+}
+
+.show_end {
+  margin-left: auto;
+}
+
+.user_result {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  max-width: 51rem;
+  display: flex;
+}
+
+.score_icon {
+  height: 10rem;
+}
+
+.score_content {
+  text-align: left;
+}
+
+.score_content > h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.score_content > p {
+  font-size: 1.2rem;
+}
+
+.mr_top_sm {
+  margin-top: 1.1rem;
+}

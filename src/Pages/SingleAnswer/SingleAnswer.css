@@ -1,0 +1,19 @@
+.right {
+  background-color: var(--success-color);
+}
+
+.wrong {
+  background-color: var(--danger-color);
+}
+
+.hoverRight:hover {
+  background-color: var(--success-color);
+}
+
+.hoverWrong:hover {
+  background-color: var(--danger-color);
+}
+
+.hoverNone:hover {
+  background-color: var(--grey-color);
+}
