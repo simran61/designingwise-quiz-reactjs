@@ -37,9 +37,6 @@ const Rules = () => {
             <i className="fa-solid fa-palette rules_icon"></i>On scoring more
             than 80% , level 2 will be unlocked.
           </p>
-          <Link to={"/SingleQuestion"}>
-            <button className="btn btn_primary btn_rules">Start Quiz</button>
-          </Link>
         </div>
         <img src={leaderboard} alt="" className="rules_banner_img" />
       </div>

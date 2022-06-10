@@ -51,19 +51,28 @@
   margin-left: 1.5rem;
 }
 
+.quiz_options {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
 .option {
   background-color: var(--grey-color);
-  width: 98%;
   padding: 1.5rem 0.5rem;
-  margin: 1rem 0;
+  flex-basis: 46%;
   border-radius: 1rem;
   cursor: pointer;
   font-weight: bold;
-  text-align: center;
 }
 
 .option:hover {
   background-color: var(--options-hover);
+}
+
+.option input {
+  opacity: 0;
 }
 
 .ques_btns {

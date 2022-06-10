@@ -1,144 +1,58 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./Results.css";
-import quiz_main from "../../assests/quiz_main.png";
-import score from "../../assests/score.png";
+import { useLocation } from "react-router-dom";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
+import { database } from "../../firebase-config";
+import { getDocs, collection } from "firebase/firestore";
+import Table from "../../components/common/Table";
+import Divider from "@mui/material/Divider";
+export default function Result() {
+  const databaseRef = collection(database, "Leader Board");
+  const navigate = useNavigate();
+  const { state } = useLocation();
+  const [finalResult, setFinalResult] = React.useState(null);
+  const [leaderBoardData, setLeaderBoardData] = React.useState([]);
+  React.useEffect(() => {
+    if (state) {
+      const { finalResults } = state;
+      setFinalResult(finalResults);
+    }
+    getData();
+  }, []);
 
-const Result = () => {
+  const getData = async () => {
+    const data = await getDocs(databaseRef);
+
+    setLeaderBoardData(
+      data.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .sort((a, b) => parseFloat(b.finalScore) - parseFloat(a.finalScore))
+    );
+  };
+  const retryQuiz = () => {
+    navigate("/");
+  };
   return (
-    <>
-      <div className="user_result">
-        <img src={quiz_main} alt="" className="score_icon" />
-        <div className="score_content">
-          <h2>Well done mate! Your score is 20.</h2>
-          <p>
-            Seems like you have a good knowledge of painting. Play more quizes
-            on DesigningWise and flaunt your knowledge in front of your friends.
-          </p>
-          <Link to={"/"}>
-            <button className="btn btn_primary mr_top_sm">Play More</button>
-          </Link>
-        </div>
+    <div>
+      <h1>Results</h1>
+      {finalResult === null ? (
+        <></>
+      ) : (
+        <h2>Your Final Score is {finalResult}</h2>
+      )}
+
+      <Button
+        onClick={retryQuiz}
+        variant="contained"
+        style={{ marginBottom: 30 }}
+      >
+        Play Quiz
+      </Button>
+      <Divider />
+      <h2>Leader Board</h2>
+      <div style={{ margin: 20 }}>
+        <Table leaderBoardData={leaderBoardData} />
       </div>
-
-      <div className="ques_option_container">
-        <div className="quiz_info">
-          <div className="show_end show_flex align_center">
-            <img src={score} alt="score" className="present_score_img mr_sm" />
-            <p className="size_md">-10 points</p>
-          </div>
-        </div>
-
-        <div className="ques_container show_flex">
-          <h1 className="ques_number">1/5</h1>
-          <h2 className="ques">
-            Which modern American Icon turned his sketches into an animated and
-            theme park empire?
-          </h2>
-        </div>
-
-        <div className="quiz_options">
-          <div className="option hoverNone">
-            <input
-              type="radio"
-              id="margotDisney"
-              name="quesOne"
-              value="margotDisney"
-            />
-            <label for="margotDisney">Margot Disney</label>
-          </div>
-
-          <div className="option right hoverRight">
-            <input
-              type="radio"
-              id="waltDisney"
-              name="quesOne"
-              value="waltDisney"
-            />
-            <label for="waltDisney">Walt Disney</label>
-          </div>
-
-          <div className="option wrong hoverWrong">
-            <input
-              type="radio"
-              id="royDisney"
-              name="quesOne"
-              value="royDisney"
-            />
-            <label for="royDisney">Roy Disney</label>
-          </div>
-
-          <div className="option hoverNone">
-            <input
-              type="radio"
-              id="maddoxDisney"
-              name="quesOne"
-              value="maddoxDisney"
-            />
-            <label for="maddoxDisney">Maddox Disney</label>
-          </div>
-        </div>
-      </div>
-
-      <div className="ques_option_container">
-        <div className="quiz_info">
-          <div className="show_end show_flex align_center">
-            <img src={score} alt="score" className="present_score_img mr_sm" />
-            <p className="size_md">20 points</p>
-          </div>
-        </div>
-
-        <div className="ques_container show_flex">
-          <h1 className="ques_number">2/5</h1>
-          <h2 className="ques">
-            Which famous artist could draw before he could walk or talk?
-          </h2>
-        </div>
-
-        <div className="quiz_options">
-          <div className="option hoverNone">
-            <input
-              type="radio"
-              id="royDisney"
-              name="quesOne"
-              value="royDisney"
-            />
-            <label for="royDisney">Roy Disney</label>
-          </div>
-
-          <div className="option hoverNone">
-            <input
-              type="radio"
-              id="waltDisney"
-              name="quesOne"
-              value="waltDisney"
-            />
-            <label for="waltDisney">Walt Disney</label>
-          </div>
-
-          <div className="option hoverNone">
-            <input
-              type="radio"
-              id="kayleeJade"
-              name="quesOne"
-              value="kayleeJade"
-            />
-            <label for="kayleeJade">Kaylee Jade</label>
-          </div>
-
-          <div className="option right hoverRight">
-            <input
-              type="radio"
-              id="pabloPicasso"
-              name="quesOne"
-              value="pabloPicasso"
-            />
-            <label for="pabloPicasso">Pablo Picasso</label>
-          </div>
-        </div>
-      </div>
-    </>
+    </div>
   );
-};
-
-export default Result;
+}
